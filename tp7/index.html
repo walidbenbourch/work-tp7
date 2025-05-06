@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Formulaire de contact</h1>
+    <hr>
+    <form action="reponse.php" method="POST">
+        <!-- Civilité -->
+        <select name="civilite">
+            <option value="M">Monsieur</option>
+            <option value="Mme" selected>Madame</option>
+            <option value="Mlle">Mademoiselle</option>
+        </select><br><br>
+
+        <!-- Nom et Prénom -->
+        <label for="nom">Nom :</label>
+        <input type="text" name="nom" id="nom" placeholder="Votre nom" required><br><br>
+
+        <label for="prenom">Prénom :</label>
+        <input type="text" name="prenom" id="prenom" placeholder="Votre prénom" required><br><br>
+
+        <!-- Email -->
+        <label for="email">Email :</label>
+        <input type="email" name="email" id="email" placeholder="exemple@domaine.com" required><br><br>
+
+        <!-- Téléphone -->
+        <label for="telephone">Téléphone :</label>
+        <input type="tel" name="telephone" id="telephone" placeholder="06 12 34 56 78"><br><br>
+
+        <!-- Sujet -->
+        <label>Sujet :</label>
+        <input type="radio" name="sujet" value="question" checked> Question
+        <input type="radio" name="sujet" value="remarque"> Remarque
+        <input type="radio" name="sujet" value="probleme"> Problème<br><br>
+
+        <!-- Message -->
+        <label for="message">Message :</label><br>
+        <textarea name="message" id="message" rows="5" cols="40" required></textarea><br><br>
+
+        <!-- Newsletter -->
+        <input type="checkbox" name="newsletter" id="newsletter" checked>
+        <label for="newsletter">Je souhaite recevoir la newsletter</label><br><br>
+
+        <!-- Bouton d'envoi -->
+        <input type="submit" value="Envoyer">
+    </form>
+    <hr>
+</body>
+</html>
